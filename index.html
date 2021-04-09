@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+        <title>Cocktail API</title>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="https://freepikpsd.com/wp-content/uploads/2019/10/logo-cocktail-png-2-Transparent-Images.png" alt="">
+            <div class="search">
+                <input id="search" type="text" name="search" placeholder="Search Cocktail">
+                <i id="search-btn" class="fas fa-search"></i>
+            </div>
+        </header>
+
+        <ul id="list-cocktail">
+        
+        </ul>
+
+
+        <script id="result-template" type="text/x-handlebars-template">
+            <li id="results" class="risultati">
+                <img class="poster" src="{{image}}" alt="poster">
+                <div class="description">
+                    <h4>{{name}}</h4>
+                </div>
+                <i class="fas fa-info-circle dettagli"></i>
+                <div class="details">
+                    <p>Bicchiere: {{glass}}</p>
+                    <p>Categoria: {{category}}</p>
+                    <p>Tipo: {{alchoolic}}</p>
+                    <span>Ingredienti:</span>
+                    <ul>
+                        <li>{{ingredient1}}</li>
+                        <li>{{ingredient2}}</li>
+                        <li>{{ingredient3}}</li>
+                        <li>{{ingredient4}}</li>
+                        <li>{{ingredient5}}</li>
+                        <li>{{ingredient6}}</li>
+                    </ul>
+                    <p class="preparazione" >{{instructons}}</p>
+                    <i class="fas fa-times-circle exit"></i>
+                </div>
+            </li>
+        </script>
+
+        <script id="not-found-template" type="text/x-handlebars-template">
+            <li class="no-results">
+                <img src="https://images.vectorhq.com/images/previews/931/spilt-drink-psd-408251.png" alt="">
+                <h2>Not Found...</h2>
+                <p>La tua ricerca non ha prodotto risultati!</p>
+            </li>
+        </script>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
